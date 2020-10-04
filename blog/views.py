@@ -50,7 +50,7 @@ def get_index_page(request):
     return render(request, 'blog/index.html', {
                             'article_list': page_detail_list,
                             'page_num': range(1, page_num + 1),
-                            'curr_page': next_page,
+                            'next_page': next_page,
                             'precious_page': precious_page,
                             'top5_article_list': top5_article_list
 
