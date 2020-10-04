@@ -1,15 +1,32 @@
-##
-1.创建项目
-    CMD进入想安装目录
-    命令: django-admin startproject 想要名称
+## 环境搭建
+##### ubuntu root默认密码修改
+sudo passwd
 
-2.创建应用
-    CMD进入manage.py同级目录
-    命运: python manage.py startapp 想要名称
-    添加应用名到settings.py中的INSTALLED_APPS里
+##### pip工具安装
+sudo apt-get install python3-pip
 
-3.启动服务
-    命令: python manage.py runserver  (服务端口号可自定义)
+##### django安装
+pip3 install django
+
+##### 查看django版本
+pip3 show django
+
+##### 创建项目
+django-admin startproject 想要名称
+
+##### 创建应用
+python manage.py startapp 想要名称
+添加应用名到settings.py中的INSTALLED_APPS里
+
+##### 启动服务
+python manage.py runserver  (服务端口号可自定义)
+python3 manage.py runserver --insecure
+
+##### 查看服务器启动状态
+ps -aux | grep python
+
+#####  关闭服务器
+sudo kill -9 (端口号)
 
 
 ##
@@ -25,7 +42,7 @@
         url函数放在urlpatterns列表中
         url函数三个参数: URL(正则) , 对应方式 , 名称
 
-##创建模型
+## 创建模型
 1.设计模型
 
 2.模型层定义字段
