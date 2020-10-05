@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+from django.db import models
+from mdeditor.fields import MDTextField
 
 
 class Article(models.Model):
@@ -9,7 +11,8 @@ class Article(models.Model):
     # 文章标题
     title = models.TextField()
     # 文章主要内容
-    content = models.TextField()
+    # content = models.TextField()
+    content = MDTextField()
     # 文章的摘要
     brief_content = models.TextField()
     # 文章的日期

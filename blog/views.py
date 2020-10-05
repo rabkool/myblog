@@ -83,7 +83,8 @@ def get_detail_page(request, article_id):
             break
 
     # curr_article = Article.objects.all()[0]
-    section_list = curr_article.content.split('\n')
+    # section_list = curr_article.content.split('\n')
+    section_list = curr_article.content
     return render(request, 'blog/detail.html', {
         'curr_article': curr_article,
         'section_list': section_list,

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,30 +11,66 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
+    <link href="{% static 'mdeditor/css/editormd.min.css' %}" rel="stylesheet">
+    <link href="{% static 'mdeditor/css/editormd.preview.css' %}" rel="stylesheet">
 </head>
 <body>
 <div class="container page-header">
     <h1>{{ curr_article.title }}</h1>
 </div>
 
+{#<div class="container page-body">#}
+{#    <div>#}
+{#        {% for section in section_list %}#}
+{#            <p>{{ section }}</p>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}
+
 <div class="container page-body">
     <div>
-        {% for section in section_list %}
-        <p>{{ section }}</p>
-        {% endfor %}
+        <div id="content"><textarea>{{ section_list }}</textarea></div>
     </div>
 </div>
 
 <div>
     <nav aria-label="...">
-  <ul class="pager">
-    <li><a href="/detail/{{ previous_article.article_id }}">上一篇: {{ previous_article.title }}</a></li>
-    <li><a href="/detail/{{ next_article.article_id }}">下一篇: {{ next_article.title }}</a></li>
-  </ul>
-</nav>
+        <ul class="pager">
+            <li><a href="/detail/{{ previous_article.article_id }}">上一篇: {{ previous_article.title }}</a></li>
+            <li><a href="/detail/{{ next_article.article_id }}">下一篇: {{ next_article.title }}</a></li>
+        </ul>
+    </nav>
 </div>
 
+<script src="{% static 'mdeditor/js/jquery.min.js' %}"></script>
+<script src="{% static 'mdeditor/js/editormd.min.js' %}"></script>
+<script src="{% static 'mdeditor/js/lib/marked.min.js' %}"></script>
+<script src="{% static 'mdeditor/js/lib/prettify.min.js' %}"></script>
+<script src="{% static 'mdeditor/js/lib/raphael.min.js' %}"></script>
+<script src="{% static 'mdeditor/js/lib/underscore.min.js' %}"></script>
+<script src="{% static 'mdeditor/js/lib/sequence-diagram.min.js' %}"></script>
+<script src="{% static 'mdeditor/js/lib/flowchart.min.js' %}"></script>
+<script src="{% static 'mdeditor/js/lib/jquery.flowchart.min.js' %}"></script>
+<script>
+    $(function () {
+        // js 解析markdown
+        editormd.markdownToHTML("content", {
+            //htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji: true,
+            taskList: true,
+            tex: true,  // 默认不解析
+            flowChart: true,  // 默认不解析
+            sequenceDiagram: true,  // 默认不解析
+        });
+
+        $(".reference-link").each(function (i, obj) {
+            console.log(obj)
+        })
+    })
+
+</script>
 
 </body>
 </html>
