@@ -22,14 +22,18 @@ python manage.py startapp 想要名称
 python manage.py runserver  (服务端口号可自定义)
 python3 manage.py runserver --insecure
 
+python3 manage.py runserver --insecure & (ssh关了进程也不会结束)
+
 ##### 查看服务器启动状态
 ps -aux | grep python
+
+ps aux | grep -i manage
 
 #####  关闭服务器
 sudo kill -9 (端口号)
 
+## 雑
 
-##
 1.创建页面
     编辑blog.views
         每一个页面对应一个函数 函数必须返回一个响应
