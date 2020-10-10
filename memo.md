@@ -1,36 +1,64 @@
 ## 环境搭建
-##### ubuntu root默认密码修改
+#### ubuntu root默认密码修改
+```
 sudo passwd
+```
 
-##### pip工具安装
+#### 指令等
+- pip工具安装
+```
 sudo apt-get install python3-pip
+```
 
-##### django安装
+- django安装
+```
 pip3 install django
+```
 
-##### 查看django版本
+- django-mdeditor
+```
+pip3 install django-mdeditor
+```
+
+- markdown安装
+```
+pi3p install markdown
+```
+
+- 查看django版本
+```
 pip3 show django
+```
 
-##### 创建项目
+- 创建项目
+```
 django-admin startproject 想要名称
+```
 
-##### 创建应用
+- 创建应用
+```
 python manage.py startapp 想要名称
 添加应用名到settings.py中的INSTALLED_APPS里
+```
 
-##### 启动服务
+- 启动服务
+```
 python manage.py runserver  (服务端口号可自定义)
 python3 manage.py runserver --insecure
-
 python3 manage.py runserver --insecure & (ssh关了进程也不会结束)
+```
 
-##### 查看服务器启动状态
+- 查看服务器启动状态
+```
 ps -aux | grep python
 
 ps aux | grep -i manage
+```
 
-#####  关闭服务器
+- 关闭服务器
+```
 sudo kill -9 (端口号)
+```
 
 ## 雑
 
