@@ -4,25 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>文章</title>
-
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous">
-    </script>
-
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <!-- 手机端适应 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 核心 CSS 文件 -->
+    <link href="../../static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- mdeditor 核心 CSS 文件 -->
     <link href="{% static 'mdeditor/css/editormd.min.css' %}" rel="stylesheet">
     <link href="{% static 'mdeditor/css/editormd.preview.css' %}" rel="stylesheet">
-
-
 </head>
 <body>
 
@@ -86,6 +74,14 @@
     </div>
 </footer>
 
+<!-- 核心 jquery 文件 -->
+<script src="../../static/jquery/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../static/jquery/jquery.min.js"><\/script>')</script>
+
+<!-- Bootstrap 核心 js 文件 -->
+<script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- mdeditor 核心 js 文件 -->
 <script src="{% static 'mdeditor/js/jquery.min.js' %}"></script>
 <script src="{% static 'mdeditor/js/editormd.min.js' %}"></script>
 <script src="{% static 'mdeditor/js/lib/marked.min.js' %}"></script>
@@ -111,7 +107,7 @@
             console.log(obj)
         })
     })
-
 </script>
+
 </body>
 </html>

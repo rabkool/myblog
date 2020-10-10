@@ -114,6 +114,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# STATIC SETTINGS
 STATIC_URL = '/static/'
+# BASE_DIR 是项目的绝对地址
+# STATIC_ROOT = os.path.join(BASE_DIR, 'collect_static')
+# 以下不是必须的
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')  # uploads必须存在，且在项目目录下
 MEDIA_URL = '/media/'  # 你上传的文件和图片会默认存在/uploads/editor下
