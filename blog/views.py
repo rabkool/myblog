@@ -30,7 +30,6 @@ def get_index_page(request):
         page = int(page)
     else:
         page = 1
-    print(page)
 
     all_article = Article.objects.all()
     top5_article_list = Article.objects.order_by('-publish_date')[:5]
