@@ -55,8 +55,17 @@
 <div>
     <nav aria-label="...">
         <ul class="pager">
-            <li><a href="/detail/{{ previous_article.article_id }}">上一篇: {{ previous_article.title }}</a></li>
-            <li><a href="/detail/{{ next_article.article_id }}">下一篇: {{ next_article.title }}</a></li>
+            {% if first_flag != 1 %}
+                {% if next_article != None %}
+                    <li><a href="/detail/{{ previous_article.article_id }}">上一篇: {{ previous_article.title }}</a></li>
+                {% endif %}
+            {% endif %}
+
+            {% if last_flag != 1 %}
+                {% if next_article != None %}
+                    <li><a href="/detail/{{ next_article.article_id }}">下一篇: {{ next_article.title }}</a></li>
+                {% endif %}
+            {% endif %}
         </ul>
     </nav>
 </div>

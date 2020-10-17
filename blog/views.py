@@ -66,21 +66,32 @@ def get_detail_page(request, article_id):
     next_article = None
 
     for index, article in enumerate(all_article):
+        first_flag = None
+        last_flag = None
+
+        # 首页
         if index == 0:
             previous_index = 0
             next_index = index + 1
+            first_flag = 1
+
+        # 末页
         elif index == len(all_article) - 1:
             previous_index = index - 1
             next_index = index
+            last_flag = 1
         else:
             previous_index = index - 1
             next_index = index + 1
+
         if article.article_id == article_id:
             curr_article = article
             previous_article = all_article[previous_index]
-            next_article = all_article[next_index]
+            if len(all_article) != 1:
+                next_article = all_article[next_index]
             break
 
+        print(next_article)
     # curr_article = Article.objects.all()[0]
     # section_list = curr_article.content.split('\n')
     section_list = curr_article.content
@@ -88,7 +99,8 @@ def get_detail_page(request, article_id):
         'curr_article': curr_article,
         'section_list': section_list,
         'previous_article': previous_article,
-        'next_article': next_article
-
+        'next_article': next_article,
+        'first_flag': first_flag,
+        'last_flag': last_flag,
     })
 
