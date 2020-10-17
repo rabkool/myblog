@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="RabKool, blog">
+    <meta name="keywords" content="RabKool">
+    <meta name="author" content="Rabkool">
     <title>RabKool</title>
     <!-- 手机端适应 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap 核心 CSS 文件 -->
     <link href="../../static/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="../../static/bootstrap/css/rabkool.css" rel="stylesheet">
 </head>
 <body>
 
@@ -79,14 +83,29 @@
         </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-        <div>
-            <h2>最新情報</h2>
-            {% for article in top5_article_list %}
-                <h4><a href=" /detail/{{ article.article_id }}">{{ article.title }}</a></h4>
-            {% endfor %}
+
+<div class="col-md-3" role="complementary">
+          <div class="sidebar-module sidebar-module-inset">
+
+              <img loading="lazy" class="site-author-image" itemprop="image" src="https://rabkool.s3-ap-northeast-1.amazonaws.com/rabkool.jpg" alt="">
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
         </div>
-    </div>
 </div>
 
 <hr>
