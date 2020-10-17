@@ -91,7 +91,6 @@ def get_detail_page(request, article_id):
                 next_article = all_article[next_index]
             break
 
-        print(next_article)
     # curr_article = Article.objects.all()[0]
     # section_list = curr_article.content.split('\n')
     section_list = curr_article.content
