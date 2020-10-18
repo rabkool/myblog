@@ -20,3 +20,16 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Introduce(models.Model):
+    # 文章的唯一id
+    introduce_id = models.AutoField(primary_key=True)
+    # 文章标题
+    title = models.TextField()
+    # 文章主要内容
+    content = models.TextField()
+    # content = MDTextField()
+
+    def __str__(self):
+        return self.title

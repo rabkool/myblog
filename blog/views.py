@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from blog.models import Article
+from blog.models import Article, Introduce
 
 from django.core.paginator import Paginator
 # Create your views here.
@@ -31,6 +31,7 @@ def get_index_page(request):
     else:
         page = 1
 
+    all_introduce = Introduce.objects.all()
     all_article = Article.objects.all()
     top5_article_list = Article.objects.order_by('-publish_date')[:5]
 
@@ -47,6 +48,7 @@ def get_index_page(request):
         precious_page = page
 
     return render(request, 'blog/index.html', {
+                            'introduce_list': all_introduce,
                             'article_list': page_detail_list,
                             'page_num': range(1, page_num + 1),
                             'next_page': next_page,
