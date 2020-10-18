@@ -47,7 +47,7 @@
 </div>
 
 <div class="container page-body">
-    <div class="col-md-9" role="main">
+    <div class="col-md-8" role="main">
         <div class="body-main">
             {% for article in article_list %}
                 <div>
@@ -78,16 +78,60 @@
                     </ul>
                 </nav>
             </div>
-
         </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-        <div>
-            <h2>最新情報</h2>
-            {% for article in top5_article_list %}
-                <h4><a href=" /detail/{{ article.article_id }}">{{ article.title }}</a></h4>
-            {% endfor %}
+    <div class="col-md-4" role="complementary">
+        <div class="col-md-6" role="main">
+            <ul class="nav navbar-nav" role="tablist" style="list-style-type:none">
+                <li role="presentation">
+                    <a href="#anime" aria-controls="anime" role="tab" data-toggle="tab">
+                        最喜欢的作品
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#yome" aria-controls="yome" role="tab" data-toggle="tab">
+                        最喜欢的女孩子
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#skill" aria-controls="skill" role="tab" data-toggle="tab">
+                        工作所用到技术
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6.5" role="complementary">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="anime">
+                    <ol class="list-unstyled">
+                        <li>妖精的旋律</li>
+                        <li>轻音少女！！</li>
+                        <li>请问您今天要来点兔子吗？</li>
+                        <li>天才麻将少女</li>
+                        <li>宝石之国</li>
+                        <li>LoveLive!</li>
+                    </ol>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="yome">
+                    <ol class="list-unstyled">
+                        <li>秋山澪</li>
+                        <li>南ことり</li>
+                        <li>優木せつ菜</li>
+                        <li>桐間紗路</li>
+                    </ol>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="skill">
+                    <ol class="list-unstyled">
+                        <li>Node.js</li>
+                        <li>iOS(Objective-C)</li>
+                        <li>Android(Java)</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 </div>
