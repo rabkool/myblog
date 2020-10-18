@@ -50,7 +50,8 @@
                     </p>
                 </div>
             {% endfor %}
-        </div>
+        </div><!-- body-main -->
+
         <div class="body-footer">
             <div class="col-md-4 col-md-offset-3">
                 <nav aria-label="Page navigation">
@@ -69,10 +70,10 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+                </nav><!-- Page navigation -->
+            </div><!-- col-md-4 col-md-offset-3 -->
+        </div><!-- body-footer -->
+    </div><!-- col-md-8 -->
 
     <div class="col-md-4" role="complementary">
         <div>
@@ -87,24 +88,26 @@
         <hr>
 
         <div class="col-md-6" role="main">
-            <ul class="nav navbar-nav" role="tablist" style="list-style-type:none">
-                <li role="presentation">
-                    <a href="#anime" aria-controls="anime" role="tab" data-toggle="tab">
-                        最喜欢的作品
-                    </a>
-                </li>
-                <li role="presentation">
-                    <a href="#yome" aria-controls="yome" role="tab" data-toggle="tab">
-                        最喜欢的女孩子
-                    </a>
-                </li>
-                <li role="presentation">
-                    <a href="#skill" aria-controls="skill" role="tab" data-toggle="tab">
-                        工作所用到技术
-                    </a>
-                </li>
-            </ul>
-        </div>
+            <div class="navbar-default">
+                <ul class="nav navbar-nav nav-stacked">
+                    <li role="presentation" class="active">
+                        <a href="#anime" aria-controls="anime" role="tab" data-toggle="tab">
+                            最喜欢的作品
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#yome" aria-controls="yome" role="tab" data-toggle="tab">
+                            最喜欢的女孩子
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#skill" aria-controls="skill" role="tab" data-toggle="tab">
+                            工作所用到技术
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- navbar-default -->
+        </div><!-- col-md-6 -->
 
         <div class="col-md-6.5" role="complementary">
             <div class="tab-content">
@@ -135,10 +138,10 @@
                         <li>Android(Java)</li>
                     </ol>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+            </div><!-- tab-content -->
+        </div><!-- col-md-6.5 -->
+    </div><!-- col-md-4 -->
+</div><!-- container page-body-->
 
 <hr>
 
