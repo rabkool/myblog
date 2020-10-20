@@ -82,3 +82,10 @@ sudo kill -9 (端口号)
         命令: python manage.py makemigrations
     运行文件 同步到数据库
         命令: python manage.py migrate
+
+
+#### css
+悬浮
+```
+style="position:fixed; z-index: 99999;"
+``` 
