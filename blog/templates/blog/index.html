@@ -43,9 +43,8 @@
                 {% for article in article_list %}
                     <div>
                         <h2><a href="/detail/{{ article.article_id }}">{{ article.title }}</a></h2>
-                        <p>
-                            {{ article.brief_content }}
-                        </p>
+                        <h4>{{ article.brief_content }}</h4>
+                        <time>{{ article.publish_date }}</time>
                     </div>
                 {% endfor %}
             </div><!-- body-main -->
