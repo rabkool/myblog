@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap 核心 CSS 文件 -->
     <link href="../../static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- live2d 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="../../static/assets/waifu.css"/>
 </head>
 <body>
 
@@ -136,6 +138,21 @@
         </div><!-- col-md-4 -->
     </div><!-- container page-body-->
 
+    <!-- live2d -->
+    <link rel="stylesheet" type="text/css" href="../../static/assets/waifu.css">
+    <div class="waifu" id="waifu">
+        <div class="waifu-tips" style="opacity: 1;"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
     <hr>
 
     <footer class="footer ">
@@ -149,13 +166,19 @@
             </div>
         </div>
     </footer>
+</div>
 
-    <!-- 核心 jquery 文件 -->
-    <script src="../../static/jquery/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../static/jquery/jquery.min.js"><\/script>')</script>
+<!-- 核心 jquery 文件 -->
+<script src="../../static/jquery/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../static/jquery/jquery.min.js"><\/script>')</script>
 
-    <!-- Bootstrap 核心 js 文件 -->
-    <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap 核心 js 文件 -->
+<script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- live2d 核心 js 文件 -->
+<script src="../../static/assets/live2d.js"></script>
+<script src="../../static/assets/waifu-tips.js"></script>
+<script type="text/javascript">initModel()</script>
 
 </body>
 </html>
